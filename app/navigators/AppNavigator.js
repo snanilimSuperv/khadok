@@ -26,7 +26,7 @@ import HomeView from "./HomeViewStack"
 // ============================================================
 // 
 const CustomDrawerContentComponent = (props) => (
-  <View style={{ flex: 1, backgroundColor: Colors.nav_bg_color}}>
+  <View style={{ flex: 1, backgroundColor: '#fff'}}>
     <DrawerItems {...props} />
   </View>
 );

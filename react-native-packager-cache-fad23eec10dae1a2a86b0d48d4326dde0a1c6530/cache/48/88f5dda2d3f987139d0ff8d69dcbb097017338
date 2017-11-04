@@ -1,0 +1,15 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _redux = require("redux");
+
+var _nav = require("./nav");
+
+var _nav2 = _interopRequireDefault(_nav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = (0, _redux.combineReducers)({
+    nav: _nav2.default
+});

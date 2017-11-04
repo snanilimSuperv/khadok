@@ -3,21 +3,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 import { connect } from 'react-redux';
-// import Icon from 'react-native-vector-icons/EvilIcons';
+import { Icon } from 'native-base';
 import { addNavigationHelpers, StackNavigator, NavigationActions } from 'react-navigation';
 //component importing 
-import MapScreen from '../components/Home';
+import HomeScreen from '../components/Home';
 // import ChatScreen from '../components/Chat';
 //variables
 import { Colors, Fonts } from '../constants';
 const backAction = NavigationActions.back()
 const HomeView = StackNavigator({
   Main: {
-    screen: MapScreen,
+    screen: HomeScreen,
     navigationOptions: ({ navigation }) => ({
-      headerTitle: <Text style={{ fontSize: Fonts.header_font_size, alignSelf: 'center', textAlign: 'center', color: Colors.primary, fontFamily: Fonts.header_font_family }}>Map</Text>,
+      headerTitle: <Text style={{ fontSize: Fonts.header_font_size, alignSelf: 'center', textAlign: 'center', color: Colors.primary, fontFamily: Fonts.header_font_family }}>Home</Text>,
       headerLeft: (
-        <Icon name="navicon" color={Colors.primary} size={28} onPress={() => navigation.navigate('DrawerOpen')} style={{ margin: 10 }} />
+        <Icon name="menu" color={Colors.primary} size={28} onPress={() => navigation.navigate('DrawerOpen')} style={{ margin: 10 }} />
       ),
       headerStyle: {
         elevation: 0,

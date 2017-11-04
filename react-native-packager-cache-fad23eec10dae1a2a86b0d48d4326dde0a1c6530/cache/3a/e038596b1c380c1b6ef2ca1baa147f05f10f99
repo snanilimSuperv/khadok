@@ -1,0 +1,254 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require("react");
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require("./../../node_modules/react-transform-hmr/lib/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = "/home/nilim/Documents/programmer/khadok/app/components/GroupVerification.js";
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactRedux = require("react-redux");
+
+var _reactNative = require("react-native");
+
+var _nativeBase = require("native-base");
+
+var _login = require("../actions/login");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  GroupVerification: {
+    displayName: "GroupVerification"
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: "/home/nilim/Documents/programmer/khadok/app/components/GroupVerification.js",
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var Item = _nativeBase.Picker.Item;
+
+var GroupVerification = _wrapComponent("GroupVerification")(function (_Component) {
+  _inherits(GroupVerification, _Component);
+
+  function GroupVerification(props) {
+    _classCallCheck(this, GroupVerification);
+
+    var _this = _possibleConstructorReturn(this, (GroupVerification.__proto__ || Object.getPrototypeOf(GroupVerification)).call(this, props));
+
+    _this.state = {
+      selected2: undefined
+    };
+    return _this;
+  }
+
+  _createClass(GroupVerification, [{
+    key: "onSubmit",
+    value: function onSubmit() {
+      this.props.dispatch((0, _login.subGroup)());
+    }
+  }, {
+    key: "onValueChange2",
+    value: function onValueChange2(value) {
+      this.setState({
+        selected2: value
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _nativeBase.Container,
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28
+          }
+        },
+        _react3.default.createElement(
+          _nativeBase.Header,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Left,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 30
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Button,
+              { transparent: true, onPress: function onPress() {
+                  return _this2.props.navigation.goBack();
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 31
+                }
+              },
+              _react3.default.createElement(_nativeBase.Icon, { name: "arrow-back", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 32
+                }
+              })
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.Body,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Title,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 36
+                }
+              },
+              "Placeholder Picker"
+            )
+          ),
+          _react3.default.createElement(_nativeBase.Right, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 38
+            }
+          })
+        ),
+        _react3.default.createElement(
+          _nativeBase.Content,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 40
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Form,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 41
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Picker,
+              {
+                mode: "dropdown",
+                placeholder: "Select One",
+                selectedValue: this.state.selected2,
+                onValueChange: this.onValueChange2.bind(this),
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 42
+                }
+              },
+              _react3.default.createElement(Item, { label: "Wallet", value: "key0", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 48
+                }
+              }),
+              _react3.default.createElement(Item, { label: "ATM Card", value: "key1", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 49
+                }
+              }),
+              _react3.default.createElement(Item, { label: "Debit Card", value: "key2", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 50
+                }
+              }),
+              _react3.default.createElement(Item, { label: "Credit Card", value: "key3", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 51
+                }
+              }),
+              _react3.default.createElement(Item, { label: "Net Banking", value: "key4", __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 52
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _nativeBase.Label,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 56
+                }
+              },
+              "Password"
+            ),
+            _react3.default.createElement(_nativeBase.Input, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              }
+            }),
+            _react3.default.createElement(
+              _nativeBase.Button,
+              { block: true, success: true, onPress: function onPress() {
+                  _this2.onSubmit();
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 60
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Text,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 61
+                  }
+                },
+                "Submit"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return GroupVerification;
+}(_react2.Component));
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {};
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(GroupVerification);

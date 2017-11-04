@@ -1,0 +1,115 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AppNavigator = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/home/nilim/Documents/programmer/khadok/app/navigators/AppNavigator.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactNative = require('react-native');
+
+var _reactRedux = require('react-redux');
+
+var _reactNavigation = require('react-navigation');
+
+var _constants = require('../constants');
+
+var _Login = require('../components/Login');
+
+var _Login2 = _interopRequireDefault(_Login);
+
+var _GroupVerification = require('../components/GroupVerification');
+
+var _GroupVerification2 = _interopRequireDefault(_GroupVerification);
+
+var _HomeViewStack = require('./HomeViewStack');
+
+var _HomeViewStack2 = _interopRequireDefault(_HomeViewStack);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CustomDrawerContentComponent = function CustomDrawerContentComponent(props) {
+  return _react2.default.createElement(
+    _reactNative.View,
+    { style: { flex: 1, backgroundColor: '#fff' }, __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      }
+    },
+    _react2.default.createElement(_reactNavigation.DrawerItems, _extends({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      }
+    }))
+  );
+};
+
+var MainNavigator = (0, _reactNavigation.DrawerNavigator)({
+  HomeView: {
+    screen: _HomeViewStack2.default,
+    navigationOptions: {
+      drawerLabel: _react2.default.createElement(
+        _reactNative.Text,
+        { style: { fontFamily: 'Montserrat-Regular', fontSize: 16, alignSelf: 'center', color: _constants.Colors.link_color, margin: 10, marginLeft: 15 }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          }
+        },
+        'Home'
+      )
+    }
+  }
+}, {
+  contentComponent: CustomDrawerContentComponent,
+  drawerPosition: 'left',
+  contentOptions: {
+    activeTintColor: '#000',
+    inactiveTintColor: '#000',
+    activeBackgroundColor: _constants.Colors.active_link_color
+  }
+});
+
+var AppNavigator = exports.AppNavigator = (0, _reactNavigation.StackNavigator)({
+  Login: { screen: _Login2.default },
+  Group: { screen: _GroupVerification2.default },
+  Main: { screen: MainNavigator }
+}, {
+  initialRouteName: _Login2.default,
+  headerMode: 'none'
+});
+
+var AppWithNavigationState = function AppWithNavigationState(_ref) {
+  var dispatch = _ref.dispatch,
+      nav = _ref.nav;
+  return _react2.default.createElement(AppNavigator, { navigation: (0, _reactNavigation.addNavigationHelpers)({ dispatch: dispatch, state: nav }), __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86
+    }
+  });
+};
+
+AppWithNavigationState.propTypes = {
+  dispatch: _propTypes2.default.func.isRequired,
+  nav: _propTypes2.default.object.isRequired
+};
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    nav: state.nav
+  };
+};
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    dispatch: dispatch
+  };
+};
+exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AppWithNavigationState);

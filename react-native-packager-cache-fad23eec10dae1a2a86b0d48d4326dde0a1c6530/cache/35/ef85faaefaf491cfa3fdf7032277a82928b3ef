@@ -14,7 +14,17 @@ var _jsxFileName = '/home/nilim/Documents/programmer/khadok/app/components/Home.
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _reactNative = require('react-native');
+
 var _nativeBase = require('native-base');
+
+var _TdMeal = require('./TdMeal');
+
+var _TdMeal2 = _interopRequireDefault(_TdMeal);
+
+var _Members = require('./Members');
+
+var _Members2 = _interopRequireDefault(_Members);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43,133 +53,174 @@ function _wrapComponent(id) {
   };
 }
 
+var BUTTONS = [{ text: "Option 0", icon: "american-football", iconColor: "#2c8ef4" }, { text: "Option 1", icon: "analytics", iconColor: "#f42ced" }, { text: "Option 2", icon: "aperture", iconColor: "#ea943b" }, { text: "Delete", icon: "trash", iconColor: "#fa213b" }, { text: "Cancel", icon: "close", iconColor: "#25de5b" }];
+var DESTRUCTIVE_INDEX = 3;
+var CANCEL_INDEX = 4;
+
 var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
   _inherits(AnatomyExample, _Component);
 
-  function AnatomyExample() {
+  function AnatomyExample(props) {
     _classCallCheck(this, AnatomyExample);
 
-    return _possibleConstructorReturn(this, (AnatomyExample.__proto__ || Object.getPrototypeOf(AnatomyExample)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (AnatomyExample.__proto__ || Object.getPrototypeOf(AnatomyExample)).call(this, props));
+
+    _this.state = {
+      active: 'false',
+      clicked: 0
+    };
+    return _this;
   }
 
   _createClass(AnatomyExample, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react3.default.createElement(
         _nativeBase.Container,
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 6
+            lineNumber: 32
           }
         },
         _react3.default.createElement(
-          _nativeBase.Header,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 7
-            }
-          },
-          _react3.default.createElement(
-            _nativeBase.Left,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 8
-              }
-            },
-            _react3.default.createElement(
-              _nativeBase.Button,
-              { transparent: true, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 9
-                }
-              },
-              _react3.default.createElement(_nativeBase.Icon, { name: 'menu', __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 10
-                }
-              })
-            )
-          ),
-          _react3.default.createElement(
-            _nativeBase.Body,
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 13
-              }
-            },
-            _react3.default.createElement(
-              _nativeBase.Title,
-              {
+          _nativeBase.Tabs,
+          { renderTabBar: function renderTabBar() {
+              return _react3.default.createElement(_nativeBase.ScrollableTab, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 14
+                  lineNumber: 33
                 }
-              },
-              'Header'
-            )
-          ),
-          _react3.default.createElement(_nativeBase.Right, {
-            __source: {
+              });
+            }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 16
-            }
-          })
-        ),
-        _react3.default.createElement(
-          _nativeBase.Content,
-          {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 18
+              lineNumber: 33
             }
           },
           _react3.default.createElement(
-            _nativeBase.Text,
-            {
-              __source: {
+            _nativeBase.Tab,
+            { heading: 'Today\'s Meal', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 19
+                lineNumber: 34
               }
             },
-            'This is Content Section'
+            _react3.default.createElement(_TdMeal2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Member', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 37
+              }
+            },
+            _react3.default.createElement(_Members2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Tab3', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 40
+              }
+            },
+            _react3.default.createElement(_TdMeal2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 41
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Tab4', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 43
+              }
+            },
+            _react3.default.createElement(_Members2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 44
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Tab5', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 46
+              }
+            },
+            _react3.default.createElement(_Members2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 47
+              }
+            })
           )
         ),
         _react3.default.createElement(
-          _nativeBase.Footer,
+          _nativeBase.View,
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 23
+              lineNumber: 52
             }
           },
           _react3.default.createElement(
-            _nativeBase.FooterTab,
-            {
-              __source: {
+            _nativeBase.Content,
+            { padder: true, style: { position: 'absolute', right: 10, bottom: 10 }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 24
+                lineNumber: 53
               }
             },
             _react3.default.createElement(
               _nativeBase.Button,
-              { full: true, __source: {
+              {
+                style: {
+                  borderWidth: 1,
+                  borderColor: 'rgba(0,0,0,0.2)',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: 65,
+                  height: 65,
+                  backgroundColor: '#666',
+                  borderRadius: 100
+                },
+                onPress: function onPress() {
+                  return _nativeBase.ActionSheet.show({
+                    options: BUTTONS,
+                    cancelButtonIndex: CANCEL_INDEX,
+                    destructiveButtonIndex: DESTRUCTIVE_INDEX,
+                    title: "Testing ActionSheet"
+                  }, function (buttonIndex) {
+                    _this2.setState({ clicked: BUTTONS[buttonIndex] });
+                  });
+                },
+                __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 25
+                  lineNumber: 54
                 }
               },
               _react3.default.createElement(
                 _nativeBase.Text,
-                {
-                  __source: {
+                { style: { fontSize: 30 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 26
+                    lineNumber: 78
                   }
                 },
-                'Footer'
+                '+'
               )
             )
           )

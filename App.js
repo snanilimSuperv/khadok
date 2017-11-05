@@ -13,6 +13,8 @@ import {
   View
 } from 'react-native';
 
+import { Root } from "native-base";
+
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider, connect } from 'react-redux';
 
@@ -27,7 +29,9 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
+        <Root>
         <AppWithNavigationState />
+        </Root>
       </Provider>
     );
   }

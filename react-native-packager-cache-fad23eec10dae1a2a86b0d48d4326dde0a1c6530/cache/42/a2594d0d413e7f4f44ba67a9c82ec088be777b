@@ -16,6 +16,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _reactNative = require('react-native');
 
+var _nativeBase = require('native-base');
+
 var _redux = require('redux');
 
 var _reactRedux = require('react-redux');
@@ -71,15 +73,24 @@ var App = _wrapComponent('App')(function (_Component) {
         _reactRedux.Provider,
         { store: _store2.default, __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 31
           }
         },
-        _react3.default.createElement(_AppNavigator2.default, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 30
-          }
-        })
+        _react3.default.createElement(
+          _nativeBase.Root,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 32
+            }
+          },
+          _react3.default.createElement(_AppNavigator2.default, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33
+            }
+          })
+        )
       );
     }
   }]);

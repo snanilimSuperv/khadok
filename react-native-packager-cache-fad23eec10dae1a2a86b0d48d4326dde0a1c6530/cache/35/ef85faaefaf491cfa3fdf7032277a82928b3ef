@@ -26,6 +26,10 @@ var _Members = require('./Members');
 
 var _Members2 = _interopRequireDefault(_Members);
 
+var _MealMenu = require('./MealMenu');
+
+var _MealMenu2 = _interopRequireDefault(_MealMenu);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -82,7 +86,7 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
         {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 33
           }
         },
         _react3.default.createElement(
@@ -91,25 +95,39 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
               return _react3.default.createElement(_nativeBase.ScrollableTab, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 33
+                  lineNumber: 34
                 }
               });
             }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 34
             }
           },
           _react3.default.createElement(
             _nativeBase.Tab,
             { heading: 'Today\'s Meal', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 35
               }
             },
             _react3.default.createElement(_TdMeal2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 35
+                lineNumber: 36
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Meal Menu', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 39
+              }
+            },
+            _react3.default.createElement(_MealMenu2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 40
               }
             })
           ),
@@ -117,41 +135,27 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
             _nativeBase.Tab,
             { heading: 'Member', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 37
-              }
-            },
-            _react3.default.createElement(_Members2.default, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 38
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _nativeBase.Tab,
-            { heading: 'Tab3', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 40
-              }
-            },
-            _react3.default.createElement(_TdMeal2.default, {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 41
-              }
-            })
-          ),
-          _react3.default.createElement(
-            _nativeBase.Tab,
-            { heading: 'Tab4', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 43
-              }
-            },
-            _react3.default.createElement(_Members2.default, {
-              __source: {
-                fileName: _jsxFileName,
                 lineNumber: 44
+              }
+            },
+            _react3.default.createElement(_Members2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 45
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Tab,
+            { heading: 'Report', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 48
+              }
+            },
+            _react3.default.createElement(_Members2.default, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 49
               }
             })
           ),
@@ -159,13 +163,13 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
             _nativeBase.Tab,
             { heading: 'Tab5', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 46
+                lineNumber: 51
               }
             },
             _react3.default.createElement(_Members2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 47
+                lineNumber: 52
               }
             })
           )
@@ -175,14 +179,14 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 52
+              lineNumber: 57
             }
           },
           _react3.default.createElement(
             _nativeBase.Content,
             { padder: true, style: { position: 'absolute', right: 10, bottom: 10 }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 53
+                lineNumber: 58
               }
             },
             _react3.default.createElement(
@@ -210,14 +214,14 @@ var AnatomyExample = _wrapComponent('AnatomyExample')(function (_Component) {
                 },
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 54
+                  lineNumber: 59
                 }
               },
               _react3.default.createElement(
                 _nativeBase.Text,
                 { style: { fontSize: 30 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 78
+                    lineNumber: 83
                   }
                 },
                 '+'

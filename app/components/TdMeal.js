@@ -7,7 +7,7 @@ export default class CardHeaderFooterExample extends Component {
         <Content>
           <Card>
             <CardItem header>
-              <Text>NativeBase</Text>
+              <Text>Today's Meal</Text>
             </CardItem>
          </Card>
          <Card>

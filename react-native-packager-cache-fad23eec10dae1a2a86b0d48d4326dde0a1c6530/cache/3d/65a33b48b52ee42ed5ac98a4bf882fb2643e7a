@@ -94,7 +94,7 @@ var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function
                     lineNumber: 10
                   }
                 },
-                'NativeBase'
+                'Today\'s Meal'
               )
             )
           ),

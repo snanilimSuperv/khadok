@@ -25,8 +25,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-  CardHeaderFooterExample: {
-    displayName: 'CardHeaderFooterExample'
+  ListAvatarExample: {
+    displayName: 'ListAvatarExample'
   }
 };
 
@@ -43,16 +43,16 @@ function _wrapComponent(id) {
   };
 }
 
-var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function (_Component) {
-  _inherits(CardHeaderFooterExample, _Component);
+var ListAvatarExample = _wrapComponent('ListAvatarExample')(function (_Component) {
+  _inherits(ListAvatarExample, _Component);
 
-  function CardHeaderFooterExample() {
-    _classCallCheck(this, CardHeaderFooterExample);
+  function ListAvatarExample() {
+    _classCallCheck(this, ListAvatarExample);
 
-    return _possibleConstructorReturn(this, (CardHeaderFooterExample.__proto__ || Object.getPrototypeOf(CardHeaderFooterExample)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ListAvatarExample.__proto__ || Object.getPrototypeOf(ListAvatarExample)).apply(this, arguments));
   }
 
-  _createClass(CardHeaderFooterExample, [{
+  _createClass(ListAvatarExample, [{
     key: 'render',
     value: function render() {
       return _react3.default.createElement(
@@ -72,7 +72,7 @@ var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function
             }
           },
           _react3.default.createElement(
-            _nativeBase.Card,
+            _nativeBase.List,
             {
               __source: {
                 fileName: _jsxFileName,
@@ -80,31 +80,26 @@ var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function
               }
             },
             _react3.default.createElement(
-              _nativeBase.CardItem,
-              { header: true, __source: {
+              _nativeBase.ListItem,
+              { avatar: true, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 9
                 }
               },
               _react3.default.createElement(
-                _nativeBase.Text,
+                _nativeBase.Left,
                 {
                   __source: {
                     fileName: _jsxFileName,
                     lineNumber: 10
                   }
                 },
-                'NativeBase'
-              )
-            ),
-            _react3.default.createElement(
-              _nativeBase.CardItem,
-              {
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 12
-                }
-              },
+                _react3.default.createElement(_nativeBase.Thumbnail, { source: { uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 11
+                  }
+                })
+              ),
               _react3.default.createElement(
                 _nativeBase.Body,
                 {
@@ -121,26 +116,189 @@ var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function
                       lineNumber: 14
                     }
                   },
-                  '//Your text here'
+                  'Kumar Pratik'
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 15
+                    }
+                  },
+                  'Doing what you like will always keep you happy . .'
                 )
-              )
-            ),
-            _react3.default.createElement(
-              _nativeBase.CardItem,
-              { footer: true, __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 19
-                }
-              },
+              ),
               _react3.default.createElement(
-                _nativeBase.Text,
+                _nativeBase.Right,
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 20
+                    lineNumber: 17
                   }
                 },
-                'GeekyAnts'
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 18
+                    }
+                  },
+                  '3:43 pm'
+                )
+              )
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.List,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 23
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.ListItem,
+              { avatar: true, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 24
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Left,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 25
+                  }
+                },
+                _react3.default.createElement(_nativeBase.Thumbnail, { source: { uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 26
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Body,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 29
+                    }
+                  },
+                  'Kumar Pratik'
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 30
+                    }
+                  },
+                  'Doing what you like will always keep you happy . .'
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Right,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 32
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 33
+                    }
+                  },
+                  '3:43 pm'
+                )
+              )
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.List,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 38
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.ListItem,
+              { avatar: true, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 39
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Left,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 40
+                  }
+                },
+                _react3.default.createElement(_nativeBase.Thumbnail, { source: { uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Body,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 43
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 44
+                    }
+                  },
+                  'Kumar Pratik'
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 45
+                    }
+                  },
+                  'Doing what you like will always keep you happy . .'
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Right,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 47
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  { note: true, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 48
+                    }
+                  },
+                  '3:43 pm'
+                )
               )
             )
           )
@@ -149,7 +307,7 @@ var CardHeaderFooterExample = _wrapComponent('CardHeaderFooterExample')(function
     }
   }]);
 
-  return CardHeaderFooterExample;
+  return ListAvatarExample;
 }(_react2.Component));
 
-exports.default = CardHeaderFooterExample;
+exports.default = ListAvatarExample;

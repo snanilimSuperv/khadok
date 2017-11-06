@@ -4,6 +4,7 @@ import { ActionSheet, View, Fab, ScrollableTab, Tabs, Tab, Container, Title, Con
 
 import TdMeal from './TdMeal';
 import Members from './Members';
+import MealMenu from './MealMenu';
 
 
 var BUTTONS = [
@@ -34,13 +35,17 @@ export default class AnatomyExample extends Component {
           <Tab heading="Today's Meal">
             <TdMeal />
           </Tab>
+
+          <Tab heading="Meal Menu">
+            <MealMenu />
+          </Tab>
+
+
           <Tab heading="Member">
             <Members />
           </Tab>
-          <Tab heading="Tab3">
-            <TdMeal />
-          </Tab>
-          <Tab heading="Tab4">
+         
+          <Tab heading="Report">
             <Members />
           </Tab>
           <Tab heading="Tab5">

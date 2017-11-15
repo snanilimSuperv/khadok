@@ -5,6 +5,8 @@ import { ActionSheet, View, Fab, ScrollableTab, Tabs, Tab, Container, Title, Con
 import TdMeal from './TdMeal';
 import Members from './Members';
 import MealMenu from './MealMenu';
+import Bazaar from './Bazaar';
+import Expense from './Expense';
 
 
 var BUTTONS = [
@@ -25,6 +27,10 @@ export default class AnatomyExample extends Component {
       active: 'false',
       clicked: 0
     };
+  }
+
+  handleClick(){
+    alert('op');
   }
 
 
@@ -48,9 +54,15 @@ export default class AnatomyExample extends Component {
           <Tab heading="Report">
             <Members />
           </Tab>
-          <Tab heading="Tab5">
-            <Members />
+
+          <Tab heading="Bazaar">
+            <Bazaar />
           </Tab>
+
+          <Tab heading="Expense">
+            <Expense />
+          </Tab>
+
         </Tabs>
 
 
@@ -67,6 +79,7 @@ export default class AnatomyExample extends Component {
                 backgroundColor:'#666',
                 borderRadius:100,
               }}
+              onClick={()=>{this.handleClick()}}
               onPress={() =>
               ActionSheet.show(
                 {
@@ -77,7 +90,8 @@ export default class AnatomyExample extends Component {
                 },
                 buttonIndex => {
                   this.setState({ clicked: BUTTONS[buttonIndex] });
-                }
+                },
+                
               )}
             >
               <Text style={{fontSize: 30}}>
